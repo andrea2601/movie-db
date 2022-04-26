@@ -1,0 +1,7 @@
+.CardList .CardList__wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+}
