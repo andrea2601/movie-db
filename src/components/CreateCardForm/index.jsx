@@ -78,7 +78,7 @@ function CreateCardForm() {
           required
         />
 
-        <input type="submit" value="Send it!" />
+        <input type="submit" value="Send it!" className="button" />
       </form>
     </div>
   );

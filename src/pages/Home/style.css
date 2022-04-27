@@ -1,0 +1,15 @@
+.Home .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Home .search label{
+    width: 75%;
+    text-align: left;
+}
+.Home .search input{
+    width: 75%;
+    height: 30px;
+}

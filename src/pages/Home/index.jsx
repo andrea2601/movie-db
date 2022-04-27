@@ -4,9 +4,10 @@ import "./style.css";
 function Home() {
   return (
     <div className="Home">
+     <div className="search">
       <label htmlFor="search">Search by title or categories:</label>
       <input type="text" id="search" name="search" />
-
+</div>
       <CardList />
     </div>
   );

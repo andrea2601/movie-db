@@ -4,4 +4,9 @@
     flex-wrap: wrap;
     align-items: stretch;
     gap: 20px;
+    margin-bottom: 30px;
+}
+
+.CardList h1{
+    color: coral;
 }
