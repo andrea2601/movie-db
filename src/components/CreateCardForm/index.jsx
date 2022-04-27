@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { POST } from "../../utils";
 import "./style.css";
+import PopUp from "../PopUp";
 
 function CreateCardForm() {
+
+  const [isOpen, setIsOpen] = useState(true);
+
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [poster, setPoster] = useState("");
@@ -21,7 +25,19 @@ function CreateCardForm() {
       genres: unStringifyGenres(genres),
       description,
     });
+
+    setTitle("");
+    setYear("");
+    setPoster("");
+    setGenres("");
+    setDescription("");
+
+    setIsOpen(true);
   };
+
+  const closeFunction = () => {
+    setIsOpen(false);
+  }
 
   return (
     <div className="CreateCardForm">
@@ -80,6 +96,8 @@ function CreateCardForm() {
 
         <input type="submit" value="Send it!" className="button" />
       </form>
+
+      {isOpen && <PopUp closeFunction={closeFunction}/>}
     </div>
   );
 }
