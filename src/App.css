@@ -4,6 +4,8 @@
 
 nav {
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
@@ -13,6 +15,7 @@ nav ul {
   align-content: center;
   list-style: none;
   gap: 20px;
+  width: 50%;
 
 }
 
@@ -24,4 +27,13 @@ nav ul li a {
 
 nav ul li a:active{
   color: #ffa17e;
+}
+
+nav .logo{
+  width: 50%;
+  text-align: left;
+}
+nav .logo img{
+  height: 50px;
+ 
 }

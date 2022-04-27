@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import logo from "./logo.png";
 import Home from "./pages/Home";
 import CreateCardForm from "./components/CreateCardForm";
 import "./App.css";
@@ -10,6 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <nav className="App--navbar">
+          <div className="logo">
+            <img src={logo} alt="logo"></img>
+          </div>
           <ul>
             <li>
               <Link to="/">Home</Link>

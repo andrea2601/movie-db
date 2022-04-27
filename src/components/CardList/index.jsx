@@ -20,8 +20,9 @@ function CardList({ filter }) {
     const filtered = moviesDataFiltered.filter((item) => {
 
       console.log(item.title.includes(filter));
-      console.log("genres",item.genres.toString().toLowerCase());
-      return item.genres.toString().toLowerCase().includes(filter.toLowerCase()) || item.title.toLowerCase().includes(filter.toLowerCase()); 
+      console.log("genres", item.genres.toString().toLowerCase());
+      
+      return item.genres.toString().toLowerCase().includes(filter.toLowerCase()) || item.title.toLowerCase().includes(filter.toLowerCase());
     });
     setMoviesData(filtered);
     console.log("il filtro è: ", filter, filtered);
