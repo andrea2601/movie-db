@@ -1,13 +1,13 @@
+import { GET } from "../../utils";
 import { useState, useEffect } from "react";
 import CardItem from "../CardItem";
 import "./style.css";
-import { getFilmAPI, postFilmAPI, deleteFilmAPI, putFilmAPI } from "../../utils";
 
 function CardList() {
   const [moviesData, setMoviesData] = useState([]);
-  const url = "https://edgemony-backend.herokuapp.com/movies";
+
   useEffect(() => {
-    getFilmAPI(url).then((data) => setMoviesData(data));
+    GET().then((data) => setMoviesData(data));
   }, []);
 
   return (

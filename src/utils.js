@@ -1,59 +1,29 @@
+const BASE_URL = "https://edgemony-backend.herokuapp.com/movies";
+
 // GET
-const getFilmAPI = async (url) => {
-    const res = await fetch(url, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    });
-    return await res.json();
-};
+const GET = () => fetch(BASE_URL).then((res) => res.json());
 
 // POST
-const postFilmAPI = async (url, title, description, poster, year, genres) => {
-    const res = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            title: title,
-            description: description,
-            poster: poster,
-            year: year,
-            genres: genres
-        })
-    });
-    return await res.json();
-};
+const POST = (body) =>
+  fetch(BASE_URL, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
 
 // DELETE
-const deleteFilmAPI = async (url, id) => {
-    const res = await fetch(`${url}${id}`, {
-        method: "DELETE",
-        headers: {
-            "Content-Type": "application/json",
-        }
-    });
-    return await res.json();
-};
+const DELETE = (id) => fetch(`${BASE_URL}/${id}`, { method: "DELETE" });
 
 // PUT
-const putFilmAPI = async (url, title, description, poster, year, genres) => {
-    const res = await fetch(url, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            title: title,
-            description: description,
-            poster: poster,
-            year: year,
-            genres: genres
-        })
-    });
-    return await res.json();
-};
+const PUT = (id, body) =>
+  fetch(`${BASE_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
 
-export {getFilmAPI, postFilmAPI, deleteFilmAPI, putFilmAPI}
+export { GET, POST, DELETE, PUT };

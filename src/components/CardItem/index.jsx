@@ -11,9 +11,8 @@ function CardItem({ cardData }) {
       <p>{cardData.description}</p>
       <div className="genre">
         <ul>
-          {cardData.genres.map((genre, i) => (
-            <li key={i}>{genre}</li>
-          ))}
+          {cardData.genres &&
+            cardData.genres.map((genre, i) => <li key={i}>{genre}</li>)}
         </ul>
       </div>
     </div>
