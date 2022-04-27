@@ -16,6 +16,7 @@ const POST = (body) =>
 // DELETE
 const DELETE = (id) => fetch(`${BASE_URL}/${id}`, { method: "DELETE" });
 
+// fetch(`https://edgemony-backend.herokuapp.com/movies/1`, { method: "DELETE" });
 // PUT
 const PUT = (id, body) =>
   fetch(`${BASE_URL}/${id}`, {

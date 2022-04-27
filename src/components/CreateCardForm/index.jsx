@@ -5,7 +5,7 @@ import PopUp from "../PopUp";
 
 function CreateCardForm() {
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
