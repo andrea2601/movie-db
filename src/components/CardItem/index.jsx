@@ -1,11 +1,12 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function CardItem({ cardData }) {
   return (
     <div className="CardItem">
-      <a href="#">
+      <Link to={`/edit-movie/${cardData.id}`}>
         <h2>{cardData.title}</h2>
-      </a>
+      </Link>
       <p>{cardData.year}</p>
       <img src={cardData.poster} alt={cardData.title} />
       <p>{cardData.description}</p>

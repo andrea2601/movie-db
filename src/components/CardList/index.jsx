@@ -25,7 +25,9 @@ function CardList({ filter }) {
       return item.genres.toString().toLowerCase().includes(filter.toLowerCase()) || item.title.toLowerCase().includes(filter.toLowerCase());
     });
     setMoviesData(filtered);
-    console.log("il filtro è: ", filter, filtered);
+    console.log("il filtered è: ", filtered);
+    console.log("il filtro è: ", filter);
+
 
     // eslint-disable-next-line
   }, [filter]);

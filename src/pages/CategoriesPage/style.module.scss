@@ -1,0 +1,20 @@
+button.category_btn{
+    width: 100px;
+    height: 30px;
+    border: 2px solid coral;
+    background: white;
+    color: coral;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button.category_btn:active{
+    color: white;
+    background: coral;
+}
+
+button.category_btn.active{
+    color: white;
+    background: coral;
+}
