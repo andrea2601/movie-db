@@ -30,7 +30,7 @@ function EditMovie() {
 
   return (
     <div className={styles.EditMovie}>
-      <CardItem cardData={movieData} />
+      <CardItem cardData={movieData} changeClass="editMovie"/>
       <CreateCardForm setModalVisibility={setModalVisibility} callType="PUT" h2Title="Edit movie" cardData={movieData}/>
       <PopUp
         text="Il film è stato Modificato!"

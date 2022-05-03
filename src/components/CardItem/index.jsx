@@ -2,7 +2,7 @@ import "./styles.css";
 import { DELETE } from "../../utils";
 import { Link } from "react-router-dom";
 
-function CardItem({ cardData, onForceRender, setModalVisibility }) {
+function CardItem({ cardData, onForceRender, setModalVisibility, changeClass }) {
 
   const onCardDelete = () => {
     DELETE(cardData.id).then((data) => onForceRender("/"));
@@ -10,7 +10,7 @@ function CardItem({ cardData, onForceRender, setModalVisibility }) {
   };
 
   return (
-    <div className="CardItem">
+    <div className={`CardItem ${changeClass ? changeClass : ""}`}>
       <Link to={`/edit-movie/${cardData.id}`}>
         <h2>{cardData.title}</h2>
       </Link>

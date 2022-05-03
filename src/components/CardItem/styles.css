@@ -1,9 +1,12 @@
-.CardList .CardList__wrapper .CardItem{
+.CardItem{
     border-radius: 20px;
     box-shadow: 5px 5px 10px 0px #000000;
     width: 25%;
     padding: 20px;
     position: relative;
+}
+.CardItem.editMovie{
+    box-shadow: none;
 }
 
 .CardItem img{
