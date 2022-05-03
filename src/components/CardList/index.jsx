@@ -6,7 +6,7 @@ import "./style.css";
 function CardList({ filter, setModalVisibility }) {
   const [moviesData, setMoviesData] = useState([]);
   const [moviesDataFiltered, setMoviesDataFiltered] = useState([]);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(true);
   
   useEffect(() => {
     GET().then((data) => {
@@ -39,7 +39,7 @@ function CardList({ filter, setModalVisibility }) {
       <div className="CardList__wrapper">
         {moviesData &&
           moviesData.map((movie) => (
-            <CardItem cardData={movie} key={movie.id} onForceRender={setValue} setModalVisibility={setModalVisibility}/>
+            <CardItem cardData={movie} key={movie.id} onForceRender={setValue} value={value} setModalVisibility={setModalVisibility}/>
           ))}
       </div>
     </div>

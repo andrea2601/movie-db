@@ -1,13 +1,20 @@
 import "./styles.css";
 import { DELETE } from "../../utils";
 import { Link } from "react-router-dom";
+import { useState } from "react"
 
-function CardItem({ cardData, onForceRender, setModalVisibility, changeClass }) {
+function CardItem({ cardData, onForceRender, value, setModalVisibility, changeClass }) {
+
+  const [booleanValue, setBoolean] = useState(true);
 
   const onCardDelete = () => {
-    DELETE(cardData.id).then((data) => onForceRender("/"));
+    DELETE(cardData.id).then((data) => onForceRender(!value));
     setModalVisibility(true);
   };
+
+  // useEffect(() => {
+  //   setBoolean(!booleanValue);
+  // }, [booleanValue]);
 
   return (
     <div className={`CardItem ${changeClass ? changeClass : ""}`}>
