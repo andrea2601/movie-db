@@ -1,21 +1,18 @@
 import "./style.css"
 import { useEffect, useState } from "react";
-function PopUp({ closeFunction }) {
+function PopUp({ closeFunction, isVisibile, text, color }) {
 
-  useEffect(() => {
-    setTimeout(closeFunction, 5000);
-  },
-    [])
-
-  return (
+  return (<>
+    {isVisibile && (
     <div className="PopUp">
-      <div className="popUpBox">
+      <div className={`popUpBox ${color}`}>
         <button onClick={closeFunction}>x</button>
-        <h1>Caricamento completato!</h1>
-        <p>Complimenti hai inserito correttamente un film al database!!!</p>
+        <h1>{text}</h1>
         <p>Aspetta 5 secondi per tornare alla pagina di inserimento o premi la "x"!</p>
       </div>
     </div>
+      )}
+    </>
   );
 }
 

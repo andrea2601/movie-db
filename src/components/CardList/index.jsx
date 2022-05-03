@@ -3,16 +3,17 @@ import { useState, useEffect } from "react";
 import CardItem from "../CardItem";
 import "./style.css";
 
-function CardList({ filter }) {
+function CardList({ filter, setModalVisibility }) {
   const [moviesData, setMoviesData] = useState([]);
   const [moviesDataFiltered, setMoviesDataFiltered] = useState([]);
-
+  const [value, setValue] = useState();
+  
   useEffect(() => {
     GET().then((data) => {
       setMoviesData(data);
       setMoviesDataFiltered(data);
     });
-  }, []);
+  }, [value]);
 
 
   useEffect(() => {
@@ -38,7 +39,7 @@ function CardList({ filter }) {
       <div className="CardList__wrapper">
         {moviesData &&
           moviesData.map((movie) => (
-            <CardItem cardData={movie} key={movie.id} />
+            <CardItem cardData={movie} key={movie.id} onForceRender={setValue} setModalVisibility={setModalVisibility}/>
           ))}
       </div>
     </div>

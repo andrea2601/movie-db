@@ -1,0 +1,60 @@
+.EditMovie {
+  display: flex;
+  gap: 20px;
+
+  >* {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+  
+// .CardItem {
+//   border-radius: 20px;
+//   border: 2px solid red;
+//   box-shadow: 5px 5px 10px 0px #000000;
+//   position: relative;
+
+//   .Card__btn{
+//     position: absolute;
+//     top: 5px;
+//     right: 5px;
+//   }
+// }
+//  img {
+//   max-width: 100%;
+//   height: 250px;
+//   object-fit: contain;
+//   border-radius: 10px;
+// }
+//  ul {
+//   list-style: none;
+//   padding: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+// }
+//  ul li {
+//   padding: 5px 10px;
+//   background: coral;
+//   color: white;
+//   margin: 5px;
+//   border-radius: 5px;
+// }
+//  p {
+//   margin-top: 0;
+//   padding-top: 0;
+// }
+//  a h2 {
+//   margin: 0;
+//   padding: 0;
+// }
+//  a {
+//   color: coral;
+//   text-decoration: none;
+// }
+//  a:active {
+//   color: #ffa17e;
+// }
+
+
+}

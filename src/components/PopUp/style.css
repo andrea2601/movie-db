@@ -1,8 +1,8 @@
-.PopUp .popUpBox{
+.PopUp .popUpBox {
     background: white;
     border: 2px solid coral;
     border-radius: 20px;
-    
+
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,7 +12,7 @@
     padding: 20px;
 }
 
-.PopUp{
+.PopUp {
     background: rgba(0, 0, 0, 0.563);
     position: fixed;
     top: 0;
@@ -21,10 +21,11 @@
     height: 100vh;
 }
 
-.PopUp .popUpBox h1{
+.PopUp .popUpBox h1 {
     margin-top: 5px;
 }
-button{
+
+button {
     width: 30px;
     height: 30px;
     border: 2px solid coral;
@@ -33,7 +34,29 @@ button{
     border-radius: 50%;
     cursor: pointer;
 }
-button:active{
+
+button:active {
     color: white;
     background: coral;
+}
+
+.PopUp .popUpBox.green {
+    border: 5px solid lightgreen;
+}
+.PopUp .popUpBox.green h1 {
+   color: green;
+}
+
+.PopUp .popUpBox.red {
+    border: 2px solid orangered;
+}
+.PopUp .popUpBox.red h1 {
+    color: orangered;
+}
+
+.PopUp .popUpBox.orange {
+    border: 2px solid orange;
+}
+.PopUp .popUpBox.orange h1 {
+    color: orange;
 }

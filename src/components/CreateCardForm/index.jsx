@@ -1,47 +1,74 @@
-import { useState } from "react";
-import { POST } from "../../utils";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { POST, PUT, GET } from "../../utils";
 import "./style.css";
-import PopUp from "../PopUp";
 
-function CreateCardForm() {
-
-  const [isOpen, setIsOpen] = useState(false);
+function CreateCardForm({ callType, h2Title = "Create a new movie card", cardData, setModalVisibility }) {
 
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [poster, setPoster] = useState("");
-  const [genres, setGenres] = useState("");
+  const [genres, setGenres] = useState([]);
   const [description, setDescription] = useState("");
 
-  const unStringifyGenres = (genres) => genres.split(",");
+  // console.log("gen", genres.join());
+
+  useEffect(() => {
+    if (cardData) {
+      setTitle(cardData.title);
+      setYear(cardData.year);
+      setPoster(cardData.poster);
+      setGenres(cardData.genres);
+      console.log("gen", genres);
+      setDescription(cardData.description);
+    }
+
+  }, [cardData]);
+
+  const location = useLocation();
+  const movieId = location.pathname.split("/").reverse()[0];
+
+  const unStringifyGenres = (genres) => {
+    if (typeof genres === 'string') {
+      return genres.split(",");
+    } else { return genres }
+  }
 
   const addNewMovie = (e) => {
     e.preventDefault();
 
-    POST({
-      title,
-      year,
-      poster,
-      genres: unStringifyGenres(genres),
-      description,
-    });
-
+    if (callType === "POST") {
+      POST({
+        title,
+        year,
+        poster,
+        genres: unStringifyGenres(genres),
+        description,
+      });
+    } else {
+      console.log("genre:...", genres);
+      PUT(movieId, {
+        title,
+        year,
+        poster,
+        genres: unStringifyGenres(genres),
+        description,
+      });
+    }
+    setModalVisibility(true);
     setTitle("");
     setYear("");
     setPoster("");
     setGenres("");
     setDescription("");
 
-    setIsOpen(true);
+
   };
 
-  const closeFunction = () => {
-    setIsOpen(false);
-  }
 
   return (
     <div className="CreateCardForm">
-      <h2>Create a new movie card</h2>
+      <h2>{h2Title}</h2>
 
       <form onSubmit={addNewMovie} className="CreateCardForm__form">
         <label htmlFor="title">Title:</label>
@@ -96,8 +123,6 @@ function CreateCardForm() {
 
         <input type="submit" value="Send it!" className="button" />
       </form>
-
-      {isOpen && <PopUp closeFunction={closeFunction}/>}
     </div>
   );
 }

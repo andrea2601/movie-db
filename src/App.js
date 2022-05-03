@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import logo from "./logo.png";
 import Home from "./pages/Home";
-import CreateCardForm from "./components/CreateCardForm";
+import AddMovie from "./pages/AddMovie";
 import CategoriesPage from './pages/CategoriesPage';
+import EditMovie from "./pages/EditMovie";
 import "./App.css";
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/add-movie" element={<CreateCardForm />} />
+          <Route path="/edit-movie/:id" element={<EditMovie />} />
+          <Route path="/add-movie" element={<AddMovie />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/" element={<Home />} />
         </Routes>
