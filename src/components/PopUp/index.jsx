@@ -1,5 +1,4 @@
 import "./style.css"
-import { useEffect, useState } from "react";
 function PopUp({ closeFunction, isVisibile, text, color }) {
 
   return (<>

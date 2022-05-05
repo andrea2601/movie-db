@@ -1,11 +1,9 @@
 import "./styles.css";
 import { DELETE } from "../../utils";
 import { Link } from "react-router-dom";
-import { useState } from "react"
 
 function CardItem({ cardData, onForceRender, value, setModalVisibility, changeClass }) {
 
-  const [booleanValue, setBoolean] = useState(true);
 
   const onCardDelete = () => {
     DELETE(cardData.id).then((data) => onForceRender(!value));

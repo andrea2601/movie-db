@@ -22,6 +22,7 @@ function EditMovie() {
 
   useEffect(() => {
     GET(movieId).then((data) => setMovieData(data));
+    // eslint-disable-next-line
   }, [isModalVisibile]);
 
   const closeFunction = () => {
