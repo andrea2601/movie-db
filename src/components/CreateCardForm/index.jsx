@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { POST, PUT, GET } from "../../utils";
+import { POST, PUT } from "../../utils";
 import "./style.css";
 
 function CreateCardForm({ callType, h2Title = "Create a new movie card", cardData, setModalVisibility }) {
@@ -22,7 +22,7 @@ function CreateCardForm({ callType, h2Title = "Create a new movie card", cardDat
       console.log("gen", genres);
       setDescription(cardData.description);
     }
-
+// eslint-disable-next-line
   }, [cardData]);
 
   const location = useLocation();
