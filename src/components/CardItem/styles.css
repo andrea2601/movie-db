@@ -56,7 +56,8 @@
 @media (orientation: portrait) {
     .CardItem{
        
-        width: 100%;
+        width: 100% !important;
+        margin: 0 10px 0 10px !important;
         
     }
 }
