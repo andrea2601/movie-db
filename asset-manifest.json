@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://andrea2601.github.io/movie-db/static/css/main.42e29fe1.css",
+    "main.css": "https://andrea2601.github.io/movie-db/static/css/main.f1e4a82a.css",
     "main.js": "https://andrea2601.github.io/movie-db/static/js/main.8293108d.js",
     "static/js/787.3daf3fd3.chunk.js": "https://andrea2601.github.io/movie-db/static/js/787.3daf3fd3.chunk.js",
     "static/media/logo.png": "https://andrea2601.github.io/movie-db/static/media/logo.9d34f33dd4b39c7afaf7.png",
     "index.html": "https://andrea2601.github.io/movie-db/index.html",
-    "main.42e29fe1.css.map": "https://andrea2601.github.io/movie-db/static/css/main.42e29fe1.css.map",
+    "main.f1e4a82a.css.map": "https://andrea2601.github.io/movie-db/static/css/main.f1e4a82a.css.map",
     "main.8293108d.js.map": "https://andrea2601.github.io/movie-db/static/js/main.8293108d.js.map",
     "787.3daf3fd3.chunk.js.map": "https://andrea2601.github.io/movie-db/static/js/787.3daf3fd3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42e29fe1.css",
+    "static/css/main.f1e4a82a.css",
     "static/js/main.8293108d.js"
   ]
 }
